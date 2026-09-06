@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🎂 HAPPY BIRTHDAY BOTH OF YOU</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 25%),
+                radial-gradient(circle at 80% 30%, rgba(255,255,255,0.12), transparent 25%),
+                linear-gradient(
+                    135deg,
+                    #ff4b8b,
+                    #8e44ad,
+                    #4776e6,
+                    #ff6a88
+                );
+
+            background-size: 400% 400%;
+            animation: backgroundMove 12s ease infinite;
+        }
+
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        /* =========================
+           STAR EFFECT
+        ========================== */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+
+            background-image:
+                radial-gradient(circle, white 1px, transparent 1px),
+                radial-gradient(circle, white 1px, transparent 1px);
+
+            background-size: 80px 80px, 130px 130px;
+            background-position: 10px 20px, 60px 90px;
+
+            opacity: 0.25;
+            animation: starsMove 20s linear infinite;
+        }
+
+        @keyframes starsMove {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-100px);
+            }
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================== */
+
+        .container {
+            position: relative;
+            z-index: 5;
+
+            width: 92%;
+            max-width: 900px;
+
+            margin: auto;
+            padding: 40px 0 60px;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           GLASS CARD
+        ========================== */
+
+        .card {
+            background: rgba(255,255,255,0.14);
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-radius: 30px;
+
+            padding: 45px 30px;
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.25),
+                inset 0 1px 1px rgba(255,255,255,0.2);
+
+            animation: cardAppear 1.2s ease;
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+
+        /* =========================
+           CAKE
+        ========================== */
+
+        .cake {
+            font-size: 90px;
+
+            display: inline-block;
+
+            animation:
+                cakeBounce 2s ease-in-out infinite,
+                cakeGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes cakeBounce {
+            0%, 100% {
+                transform: translateY(0) rotate(-2deg);
+            }
+
+            50% {
+                transform: translateY(-18px) rotate(2deg);
+            }
+        }
+
+        @keyframes cakeGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 25px rgba(255,255,255,0.9));
+            }
+        }
+
+
+        /* =========================
+           HEADINGS
+        ========================== */
+
+        h1 {
+            font-family: "Baloo 2", cursive;
+
+            font-size: clamp(2.8rem, 9vw, 5.5rem);
+
+            line-height: 1;
+
+            margin: 15px 0;
+
+            text-shadow:
+                0 5px 15px rgba(0,0,0,0.3);
+
+            animation: titleGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% {
+                text-shadow:
+                    0 5px 15px rgba(0,0,0,0.3);
+            }
+
+            50% {
+                text-shadow:
+                    0 5px 25px rgba(255,255,255,0.7);
+            }
+        }
+
+        .name {
+            font-family: "Baloo 2", cursive;
+
+            font-size: clamp(1.7rem, 6vw, 3rem);
+
+            color: #fff36a;
+
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+
+            max-width: 650px;
+
+            margin: auto;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           PHOTO
+        ========================== */
+
+        .photo-box {
+            width: 180px;
+            height: 180px;
+
+            margin: 30px auto;
+
+            border-radius: 50%;
+
+            border: 5px solid rgba(255,255,255,0.8);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+            background: rgba(255,255,255,0.15);
+
+            box-shadow:
+                0 0 30px rgba(255,255,255,0.3);
+
+            transition: 0.4s;
+        }
+
+        .photo-box:hover {
+            transform: scale(1.08);
+            box-shadow:
+                0 0 45px rgba(255,255,255,0.7);
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .photo-placeholder {
+            font-size: 70px;
+        }
+
+
+        /* =========================
+           COUNTDOWN
+        ========================== */
+
+        .countdown-title {
+            font-family: "Baloo 2", cursive;
+            font-size: 1.7rem;
+
+            margin-top: 25px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin: 20px 0 30px;
+        }
+
+        .time-box {
+            min-width: 75px;
+
+            padding: 12px 10px;
+
+            border-radius: 15px;
+
+            background: rgba(0,0,0,0.18);
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .time-box span {
+            display: block;
+
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+
+        .time-box small {
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================== */
+
+        .buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+        button {
+            border: none;
+
+            padding: 15px 25px;
+
+            border-radius: 50px;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 0.95rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            color: #8e44ad;
+
+            background: white;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.2);
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-4px) scale(1.04);
+
+            box-shadow:
+                0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+
+        /* =========================
+           SURPRISE MESSAGE
+        ========================== */
+
+        #surprise {
+            display: none;
+
+            margin-top: 30px;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,0.12);
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            animation: messageAppear 0.8s ease;
+        }
+
+        @keyframes messageAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #surprise h2 {
+            font-family: "Baloo 2", cursive;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        #surprise p {
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           BALLOONS
+        ========================== */
+
+        .balloon {
+            position: fixed;
+
+            bottom: -150px;
+
+            font-size: 55px;
+
+            z-index: 2;
+
+            pointer-events: none;
+
+            animation: balloonFloat linear infinite;
+        }
+
+        .balloon1 {
+            left: 5%;
+            animation-duration: 10s;
+        }
+
+        .balloon2 {
+            left: 22%;
+            animation-duration: 13s;
+            animation-delay: 2s;
+        }
+
+        .balloon3 {
+            right: 22%;
+            animation-duration: 11s;
+            animation-delay: 1s;
+        }
+
+        .balloon4 {
+            right: 5%;
+            animation-duration: 14s;
+            animation-delay: 3s;
+        }
+
+        @keyframes balloonFloat {
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(-5deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-60vh)
+                    rotate(5deg);
+            }
+
+            100% {
+                transform:
+                    translateY(-120vh)
+                    rotate(-5deg);
+            }
+        }
+
+
+        /* =========================
+           CONFETTI CANVAS
+        ========================== */
+
+        #confettiCanvas {
+            position: fixed;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            pointer-events: none;
+
+            z-index: 20;
+        }
+
+
+        /* =========================
+           FIREWORKS
+        ========================== */
+
+        .firework {
+            position: fixed;
+
+            width: 5px;
+            height: 5px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            pointer-events: none;
+
+            z-index: 15;
+
+            animation: firework 1s ease-out forwards;
+        }
+
+        @keyframes firework {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+                box-shadow: 0 0 5px white;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(25);
+                opacity: 0;
+
+                box-shadow:
+                    30px 0 white,
+                    -30px 0 white,
+                    0 30px white,
+                    0 -30px white,
+                    22px 22px white,
+                    -22px -22px white,
+                    22px -22px white,
+                    -22px 22px white;
+            }
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .footer {
+            margin-top: 30px;
+
+            opacity: 0.75;
+
+            font-size: 0.85rem;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 94%;
+                padding-top: 25px;
+            }
+
+            .card {
+                padding: 30px 18px;
+                border-radius: 25px;
+            }
+
+            .cake {
+                font-size: 70px;
+            }
+
+            .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .photo-box {
+                width: 145px;
+                height: 145px;
+            }
+
+            .photo-placeholder {
+                font-size: 55px;
+            }
+
+            .time-box {
+                min-width: 65px;
+                padding: 10px 7px;
+            }
+
+            .time-box span {
+                font-size: 1.35rem;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .balloon {
+                font-size: 40px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         BALLOONS
+    ========================== -->
+
+    <div class="balloon balloon1">🎈</div>
+    <div class="balloon balloon2">🎈</div>
+    <div class="balloon balloon3">🎈</div>
+    <div class="balloon balloon4">🎈</div>
+
+
+    <!-- =========================
+         CONFETTI
+    ========================== -->
+
+    <canvas id="confettiCanvas"></canvas>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="container">
+
+        <section class="card">
+
+            <!-- Cake -->
+            <div class="cake">
+                🎂
+            </div>
+
+
+            <!-- Heading -->
+
+            <h1>
+                Happy Birthday!
+            </h1>
+
+            <div class="name">
+                Dear Birthday Star Shivank ❤️
+                        &
+                Dear Birthday Star Tannu ❤️
+            </div>
+
+
+            <p class="subtitle">
+                Today is your special day! 🎉
+                May your life be filled with happiness,
+                success, laughter, love and amazing memories.
+                ✨
+            </p>
+
+
+            <!-- =========================
+                 PHOTO
+            ========================== -->
+
+            <div class="photo-box">
+
+                <!--
+                    Replace this emoji with your photo.
+
+                    Example:
+
+                    <img src="photo.jpg" alt="Birthday Photo">
+                -->
+
+                <div class="photo-placeholder">
+                    <img src="https://img.magnific.com/premium-photo/cartoon-picture-two-children-who-are-good-friends_1262982-261.jpg" alt="Birthday Photo">
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 COUNTDOWN
+            ========================== -->
+
+            <div class="countdown-title">
+                🎉 Birthday Countdown 🎉
+            </div>
+
+            <div class="countdown">
+
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>DAYS</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>HOURS</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>MINUTES</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>SECONDS</small>
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 BUTTONS
+            ========================== -->
+
+            <div class="buttons">
+
+                <button onclick="birthdaySurprise()">
+                    🎁 Open Surprise
+                </button>
+
+                <button onclick="startFireworks()">
+                    🎆 Fireworks
+                </button>
+
+                <button onclick="toggleMusic()" id="musicButton">
+                    🎵 Play Music
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 SURPRISE
+            ========================== -->
+
+            <div id="surprise">
+
+                <h2>
+                    🎉 Surprise! 🎉
+                </h2>
+
+                <p>
+                    May this birthday bring you countless reasons
+                    to smile, beautiful memories to treasure,
+                    and new adventures to enjoy! ❤️
+                    <br><br>
+
+                    Keep smiling, keep dreaming,
+                    and keep shining! ✨
+                    <br><br>
+
+                    🎂 HAPPY BIRTHDAY! 🎂
+                </p>
+
+            </div>
+
+
+            <div class="footer">
+                Made with ❤️ for a very special birthday
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         MUSIC
+
+         Put "birthday-music.mp3"
+         in the same folder.
+    ========================== -->
+
+    <audio id="birthdayMusic" loop>
+        <source src="birthday-music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================
+         CONFETTI LIBRARY
+    ========================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+
+    <script>
+
+        /* ==================================
+           CONFETTI
+        =================================== */
+
+        function launchConfetti() {
+
+            if (typeof confetti === "undefined") {
+                return;
+            }
+
+            confetti({
+                particleCount: 180,
+                spread: 120,
+                startVelocity: 45,
+                origin: {
+                    y: 0.6
+                }
+            });
+
+            setTimeout(() => {
+
+                confetti({
+                    particleCount: 120,
+                    angle: 60,
+                    spread: 80,
+                    origin: {
+                        x: 0,
+                        y: 0.7
+                    }
+                });
+
+                confetti({
+                    particleCount: 120,
+                    angle: 120,
+                    spread: 80,
+                    origin: {
+                        x: 1,
+                        y: 0.7
+                    }
+                });
+
+            }, 300);
+        }
+
+
+        /* ==================================
+           SURPRISE BUTTON
+        =================================== */
+
+        function birthdaySurprise() {
+
+            const surprise =
+                document.getElementById("surprise");
+
+            surprise.style.display = "block";
+
+            launchConfetti();
+
+            startFireworks();
+
+            // Scroll to surprise
+            setTimeout(() => {
+
+                surprise.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            }, 300);
+        }
+
+
+        /* ==================================
+           FIREWORKS
+        =================================== */
+
+        function createFirework() {
+
+            const firework =
+                document.createElement("div");
+
+            firework.className = "firework";
+
+            firework.style.left =
+                Math.random() * 90 + 5 + "%";
+
+            firework.style.top =
+                Math.random() * 55 + 10 + "%";
+
+            document.body.appendChild(firework);
+
+            setTimeout(() => {
+                firework.remove();
+            }, 1000);
+        }
+
+
+        function startFireworks() {
+
+            for (let i = 0; i < 12; i++) {
+
+                setTimeout(() => {
+                    createFirework();
+                }, i * 180);
+
+            }
+
+        }
+
+
+        /* ==================================
+           MUSIC
+        =================================== */
+
+        const music =
+            document.getElementById("birthdayMusic");
+
+        const musicButton =
+            document.getElementById("musicButton");
+
+
+        function toggleMusic() {
+
+            if (music.paused) {
+
+                music.play()
+                    .then(() => {
+
+                        musicButton.innerHTML =
+                            "⏸️ Pause Music";
+
+                    })
+                    .catch(() => {
+
+                        alert(
+                            "Please add birthday-music.mp3 in the same folder as index.html."
+                        );
+
+                    });
+
+            } else {
+
+                music.pause();
+
+                musicButton.innerHTML =
+                    "🎵 Play Music";
+
+            }
+
+        }
+
+
+        /* ==================================
+           COUNTDOWN
+
+           CHANGE THIS DATE
+           TO THE BIRTHDAY DATE
+        =================================== */
+
+        const birthdayDate =
+            new Date("November 8, 2026 00:00:00").getTime();
+
+
+        function updateCountdown() {
+
+            const now =
+                new Date().getTime();
+
+            const distance =
+                birthdayDate - now;
+
+
+            if (distance <= 0) {
+
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+
+                return;
+            }
+
+
+            const days =
+                Math.floor(
+                    distance /
+                    (1000 * 60 * 60 * 24)
+                );
+
+            const hours =
+                Math.floor(
+                    (distance %
+                    (1000 * 60 * 60 * 24)) /
+                    (1000 * 60 * 60)
+                );
+
+            const minutes =
+                Math.floor(
+                    (distance %
+                    (1000 * 60 * 60)) /
+                    (1000 * 60)
+                );
+
+            const seconds =
+                Math.floor(
+                    (distance %
+                    (1000 * 60)) /
+                    1000
+                );
+
+
+            document.getElementById("days")
+                .innerText =
+                String(days).padStart(2, "0");
+
+            document.getElementById("hours")
+                .innerText =
+                String(hours).padStart(2, "0");
+
+            document.getElementById("minutes")
+                .innerText =
+                String(minutes).padStart(2, "0");
+
+            document.getElementById("seconds")
+                .innerText =
+                String(seconds).padStart(2, "0");
+
+        }
+
+
+        setInterval(updateCountdown, 1000);
+
+        updateCountdown();
+
+
+        /* ==================================
+           PAGE LOAD CELEBRATION
+        =================================== */
+
+        window.addEventListener("load", () => {
+
+            setTimeout(() => {
+
+                launchConfetti();
+
+            }, 700);
+
+        });
+
+    </script>
+
+</body>
+</html>
